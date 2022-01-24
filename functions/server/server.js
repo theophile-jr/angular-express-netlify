@@ -12,7 +12,7 @@ router.get('/', (req, res) => {
   res.end();
 });
 
-app.use('/test', router);  // path must route to lambda
+app.use('./netlify/functions/server', router);  // path must route to lambda
 
 module.exports = app;
 module.exports.handler = serverless(app);
