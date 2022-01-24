@@ -3,7 +3,7 @@
   base = "/frontend/"
   command = "ng build"
   functions = "functions"
-# publish = "/frontend/dist/frontend/"
+  publish = "/frontend/dist/frontend/"
 
   ## Uncomment to use this redirect for Single Page Applications like create-react-app.
   ## Not needed for static site generators.
