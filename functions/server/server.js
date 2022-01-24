@@ -1,4 +1,3 @@
-
 'use strict';
 const express = require('express');
 const serverless = require('serverless-http');
@@ -12,7 +11,8 @@ router.get('/', (req, res) => {
   res.end();
 });
 
-app.use('./netlify/functions/server', router);  // path must route to lambda
+app.use(bodyParser.json());
+app.use('/.netlify/functions/server', router);  // path must route to lambda
 
 module.exports = app;
 module.exports.handler = serverless(app);
